@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.CSVtoJSONopenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.convertCsvToJsonButton = new System.Windows.Forms.Button();
             this.convertJsonToCsvButton = new System.Windows.Forms.Button();
             this.resultRichTextBox = new System.Windows.Forms.RichTextBox();
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.JSONtoCSVopenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
-            // openFileDialog
+            // CSVtoJSONopenFileDialog
             // 
-            this.openFileDialog.Filter = "CSV files|*.csv";
+            this.CSVtoJSONopenFileDialog.Filter = "CSV files|*.csv";
             // 
             // convertCsvToJsonButton
             // 
@@ -49,7 +49,7 @@
             this.convertCsvToJsonButton.Name = "convertCsvToJsonButton";
             this.convertCsvToJsonButton.Size = new System.Drawing.Size(622, 66);
             this.convertCsvToJsonButton.TabIndex = 0;
-            this.convertCsvToJsonButton.Text = "Convert CSV to JSON";
+            this.convertCsvToJsonButton.Text = "Convert CSV to JSON (with no nested levels)";
             this.convertCsvToJsonButton.UseVisualStyleBackColor = true;
             this.convertCsvToJsonButton.Click += new System.EventHandler(this.convertCsvToJsonButton_Click);
             // 
@@ -59,7 +59,7 @@
             this.convertJsonToCsvButton.Name = "convertJsonToCsvButton";
             this.convertJsonToCsvButton.Size = new System.Drawing.Size(622, 66);
             this.convertJsonToCsvButton.TabIndex = 1;
-            this.convertJsonToCsvButton.Text = "Convert JSON to CSV";
+            this.convertJsonToCsvButton.Text = "Convert JSON to CSV (with no nested levels)";
             this.convertJsonToCsvButton.UseVisualStyleBackColor = true;
             this.convertJsonToCsvButton.Click += new System.EventHandler(this.convertJsonToCsvButton_Click);
             // 
@@ -87,6 +87,10 @@
             this.copyToolStripMenuItem.Text = "Copy result";
             this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
+            // JSONtoCSVopenFileDialog
+            // 
+            this.JSONtoCSVopenFileDialog.Filter = "JSON files|*.json";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -95,6 +99,9 @@
             this.Controls.Add(this.resultRichTextBox);
             this.Controls.Add(this.convertJsonToCsvButton);
             this.Controls.Add(this.convertCsvToJsonButton);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(718, 537);
+            this.MinimumSize = new System.Drawing.Size(718, 537);
             this.Name = "MainForm";
             this.Text = "CSV/JSON converter";
             this.contextMenuStrip.ResumeLayout(false);
@@ -104,12 +111,12 @@
 
         #endregion
 
-        private OpenFileDialog openFileDialog;
-        private SaveFileDialog saveFileDialog;
+        private OpenFileDialog CSVtoJSONopenFileDialog;
         private Button convertCsvToJsonButton;
         private Button convertJsonToCsvButton;
         private RichTextBox resultRichTextBox;
         private ContextMenuStrip contextMenuStrip;
         private ToolStripMenuItem copyToolStripMenuItem;
+        private OpenFileDialog JSONtoCSVopenFileDialog;
     }
 }
